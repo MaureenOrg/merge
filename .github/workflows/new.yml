@@ -13,17 +13,17 @@ jobs:
     runs-on: ${{ matrix.os }}
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v1
   
-      - uses: actions/github-script@v7
-        with:
-         script: |
-           github.rest.git.createRef({
-             owner: context.repo.owner,
-             repo: context.repo.repo,
-             ref: 'refs/heads/featureA',
-             sha: context.sha
-           }) 
+      # - uses: actions/github-script@v7
+      #   with:
+      #    script: |
+      #      github.rest.git.createRef({
+      #        owner: context.repo.owner,
+      #        repo: context.repo.repo,
+      #        ref: 'refs/heads/featureA',
+      #        sha: context.sha
+      #      }) 
 
       - name: Set GitHub Summary
         run: |
