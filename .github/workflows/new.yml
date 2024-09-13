@@ -44,5 +44,5 @@ jobs:
           echo "Hello my" >> "$GITHUB_STEP_SUMMARY"
         shell: bash
       - name: run action
-        uses: first-org-ea-sandbox/actionless/.github/workflows/new.yml@v2
+        uses: first-org-ea-sandbox/actionless/.github/workflows/new.yml@v3
 
