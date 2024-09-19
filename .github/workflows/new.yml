@@ -47,6 +47,6 @@ jobs:
         run: |
           echo "Hello my" >> "$GITHUB_STEP_SUMMARY"
         shell: bash
-      # - name: run action
-      #   uses: first-org-ea-sandbox/actionless/.github/workflows/new.yml@v3
+      - name: run action
+        uses: MaureenOrg/merge/.github/workflows/called.yml@main
 
