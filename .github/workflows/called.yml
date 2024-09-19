@@ -1,0 +1,24 @@
+name: workflow
+
+on:
+  workflow_call:
+    inputs:
+      doBuild:
+        type: string
+        default: "true" 
+      doNotify:
+        type: string
+        default: "false"
+jobs:
+
+  job1:  
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: write
+
+    steps:
+    - name: Echo inputs
+      run: |
+        echo "inputs.doBuild='${{inputs.doBuild}}'"         
+        echo "inputs.doNotify='${{inputs.doBuild}}'"
