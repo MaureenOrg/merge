@@ -7,6 +7,12 @@ on:
   merge_group:
 
 jobs:
+  job1:
+    uses: MaureenOrg/merge/.github/workflows/called.yml@main
+    with:
+       doBuild: true
+       doNotify: true
+
   deploy:
     strategy:
       fail-fast: false
@@ -48,6 +54,6 @@ jobs:
         run: |
           echo "Hello my" >> "$GITHUB_STEP_SUMMARY"
         shell: bash
-      - name: run action
-        uses: MaureenOrg/merge/.github/workflows/called.yml@main
+      # - name: run action
+      #   uses: MaureenOrg/merge/.github/workflows/called.yml@main
 
