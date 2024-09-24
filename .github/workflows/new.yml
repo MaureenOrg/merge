@@ -9,7 +9,7 @@ on:
 
 jobs:
   job1:
-    uses: MaureenOrg/merge/.github/workflows/called.yml@main
+    uses: MaureenOrg/Actions/.github/workflows/called.yml@master
     with:
        doBuild: true
        doNotify: true
