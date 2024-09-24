@@ -14,6 +14,12 @@ jobs:
        doBuild: true
        doNotify: true
 
+
+  job2:
+    uses: MaureenOrg/Actions/.github/workflows/called.yml@master
+    with:
+       doBuild: true
+
   deploy:
     strategy:
       fail-fast: false
