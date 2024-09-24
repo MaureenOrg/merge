@@ -19,6 +19,7 @@ jobs:
     uses: MaureenOrg/Actions/.github/workflows/called.yml@master
     with:
        doBuild: true
+       doTest: true
 
   deploy:
     strategy:
